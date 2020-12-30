@@ -41,8 +41,8 @@ ENV PHPIZE_DEPS \
       && docker-php-ext-enable xdebug \
       && echo 'xdebug.cli_color=1' > /usr/local/etc/php/conf.d/xdebug.ini \
       && apk del .build-deps \
-      && composer --no-interaction global --prefer-stable require ${COMPOSER_PACKAGES} \
-      && composer clear-cache \
+      # && composer --no-interaction global --prefer-stable require ${COMPOSER_PACKAGES} \
+      # && composer clear-cache \
       && rm -rf /tmp/cache
 
 
